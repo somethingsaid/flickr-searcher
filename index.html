@@ -7,13 +7,26 @@
     <script type="text/javascript" src="js/app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Flickr Searcher</title>
 </head>
 <body>
+	<div class="masthead-container">
+		<nav class="masthead">
+			<em>Flickr</em> Searcher
+		</nav>
+	</div>
 	<div ng-controller="myController">
+		<div class="search">
+			<form name="searchForm" ng-submit="submit()">
+				<input ng-model="searchTag" type="text" placeholder="Enter search tag" size="30" required/>
+				<button type="submit">Go!</button>
+			</form>
+		</div>
+		<p>Search tag: {{searchTag}}</p>
 	</div>
 	
 </body>

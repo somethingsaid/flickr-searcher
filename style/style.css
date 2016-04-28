@@ -1,6 +1,46 @@
+/* flickr url_z longest side is 640px */
+/* Some mixins */
 /* Standard Declarations */
 html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
+
+/* Set background */
+html, body {
+  background-color: #424242;
+  font-family: "Roboto", "sans serif"; }
+
+/* Masthead */
+.masthead-container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #000000;
+  padding-top: 0; }
+  .masthead-container em {
+    font-style: normal;
+    color: #FFC107; }
+  .masthead-container .masthead {
+    padding: 0;
+    margin: 0;
+    font-size: 40px; }
+
+/* Form section */
+.search {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #212121;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  font-size: 20px; }
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .masthead-container .masthead {
+    font-size: 60px; }
+  .search {
+    font-size: 40px; } }
