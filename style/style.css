@@ -36,11 +36,30 @@ html, body {
   padding: 15px 0;
   background-color: #212121;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 6px;
   font-size: 20px; }
+
+/* Result/gallery section */
+h2 {
+  color: #FFFFFF;
+  text-align: center; }
+  h2 em {
+    font-style: normal;
+    color: #FFC107; }
+
+.gallery {
+  width: 90%; }
+
+.photo {
+  width: 100%;
+  margin: auto;
+  padding: 2px 2px; }
 
 /* Media queries */
 @media screen and (min-width: 768px) {
   .masthead-container .masthead {
     font-size: 60px; }
   .search {
-    font-size: 40px; } }
+    font-size: 40px; }
+  h2 {
+    font-size: 200%; } }

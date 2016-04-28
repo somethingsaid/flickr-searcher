@@ -19,14 +19,22 @@
 			<em>Flickr</em> Searcher
 		</nav>
 	</div>
-	<div ng-controller="myController">
+	<div ng-controller="myController" ng-init="callComplete = false; callError = false">
 		<div class="search">
 			<form name="searchForm" ng-submit="submit()">
 				<input ng-model="searchTag" type="text" placeholder="Enter search tag" size="30" required/>
 				<button type="submit">Go!</button>
 			</form>
 		</div>
-		<p>Search tag: {{searchTag}}</p>
+		<h2 ng-if="callComplete">Found {{photos.length}} photos for <em>#{{query}}</em></h2>
+		<h2 ng-if="callError">Something went wrong, try again</h2>
+		<div ng-if="callComplete" class="gallery">
+			<div ng-repeat="photo in photos" class="photo">
+				<a target="_blank" ng-href="https:flickr.com/photos/{{photo.owner}}/{{photo.id}}">
+					<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"/ width='300' height='200'>
+				</a>
+			</div>
+		</div>
 	</div>
 	
 </body>
