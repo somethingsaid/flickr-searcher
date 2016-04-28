@@ -2,4 +2,4 @@
 Retrieve photos from Flickr.com
 
 * AngularJS
-* http://somethingsaid.github.io/flickr_searcher
+* http://somethingsaid.github.io/flickr-searcher
