@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div ng-controller="myController" ng-init="callComplete = false; callError = false">
-		<div class="fixed">
+		<section class="fixed">
 			<div class="masthead-container">
 				<nav class="masthead">
 					<em>Flickr</em> Searcher
@@ -29,8 +29,8 @@
 				<h2 ng-if="callComplete">Found {{photos.length}} photos for <em>#{{query}}</em></h2>
 				<h2 ng-if="callError">Something went wrong, try again</h2>
 			</div>
-		</div>
-		<div class="results">
+		</section>
+		<section class="results">
 			<div ng-if="callComplete" class="gallery">
 				<div ng-repeat="photo in photos" class="photo">
 					<a target="_blank" ng-href="https:flickr.com/photos/{{photo.owner}}/{{photo.id}}">
@@ -38,7 +38,7 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</section>
 	</div>
 	
 </body>
