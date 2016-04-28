@@ -11,6 +11,12 @@ html, body {
   background-color: #424242;
   font-family: "Roboto", "sans serif"; }
 
+.fixed {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  z-index: 999; }
+
 /* Masthead */
 .masthead-container {
   width: 100%;
@@ -39,6 +45,11 @@ html, body {
   font-size: 20px; }
 
 /* Result/gallery section */
+.results {
+  position: relative;
+  z-index: 1;
+  top: 300px; }
+
 h2 {
   color: #FFFFFF;
   text-align: center; }
@@ -68,12 +79,13 @@ h2 {
     display: inline-block; } }
 
 @media screen and (min-width: 768px) {
+  .results {
+    top: 350px; }
   .masthead-container .masthead {
     font-size: 60px; }
   .search {
-    font-size: 40px; }
-  h2 {
-    font-size: 200%; }
+    font-size: 40px;
+    top: 70px; }
   .gallery .photo {
     width: 24%;
     max-width: 240px;
