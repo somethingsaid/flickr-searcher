@@ -31,7 +31,7 @@
 		<div ng-if="callComplete" class="gallery">
 			<div ng-repeat="photo in photos" class="photo">
 				<a target="_blank" ng-href="https:flickr.com/photos/{{photo.owner}}/{{photo.id}}">
-					<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"/ width='300' height='200'>
+					<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"/ width='960' height='640' alt=''>
 				</a>
 			</div>
 		</div>

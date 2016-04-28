@@ -1,4 +1,3 @@
-/* flickr url_z longest side is 640px */
 /* Some mixins */
 /* Standard Declarations */
 html {
@@ -47,19 +46,38 @@ h2 {
     font-style: normal;
     color: #FFC107; }
 
-.gallery {
-  width: 90%; }
+.gallery .photo {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+  /* to center the container */
+  padding: 0 2px; }
 
-.photo {
+.gallery img {
   width: 100%;
-  margin: auto;
-  padding: 2px 2px; }
+  height: auto; }
 
 /* Media queries */
+@media screen and (min-width: 420px) {
+  .gallery .photo {
+    width: 48%;
+    max-width: 480px;
+    float: left; }
+  .gallery img {
+    width: 100%;
+    display: inline-block; } }
+
 @media screen and (min-width: 768px) {
   .masthead-container .masthead {
     font-size: 60px; }
   .search {
     font-size: 40px; }
   h2 {
-    font-size: 200%; } }
+    font-size: 200%; }
+  .gallery .photo {
+    width: 24%;
+    max-width: 240px;
+    float: left; }
+  .gallery img {
+    width: 100%;
+    display: inline-block; } }
