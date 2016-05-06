@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngAnimate'])
-    .controller('myController', function($http, $scope, $sce) {
+    .controller('myController', ['$http', '$scope', '$sce', function($http, $scope, $sce) {
     	var init = function() {
     		$scope.callComplete = false;
     		$scope.callError = false;
@@ -39,4 +39,4 @@ angular.module('myApp', ['ngAnimate'])
     			console.log('Invalid');
     		}
     	}
-    });
+    }]);
